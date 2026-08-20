@@ -6,7 +6,7 @@ English | [简体中文](README.md)
 
 A local web page for looking up words from the Chinese National Gaokao English curriculum list (about 3,000 headwords). Search by English spelling or Chinese gloss. The same page can be opened on a phone or another computer on the LAN.
 
-The current list has about 748 entries: common curriculum words plus in-class additions, merged and de-duplicated.
+The current list has about 781 entries: common curriculum words plus in-class additions, merged and de-duplicated.
 
 ## Features
 

@@ -141,6 +141,40 @@ extras = [
     {"en": "clerk", "cn": "n. 职员；办事员"},
     {"en": "mineral", "cn": "n. 矿物"},
     {"en": "theft", "cn": "n. 盗窃；偷窃"},
+    # 2026.08.19
+    {"en": "surrounding", "cn": "adj. 周围的；附近的"},
+    {"en": "horrible", "cn": "adj. 可怕的；糟糕的"},
+    {"en": "bar", "cn": "n. 酒吧；吧台 v. 阻挡；禁止"},
+    {"en": "bet", "cn": "v. 打赌 n. 赌注"},
+    {"en": "visual", "cn": "adj. 视觉的；视力的 n. 视觉资料；图像"},
+    {"en": "leisure", "cn": "n. 闲暇；空闲"},
+    {"en": "domain", "cn": "n. 领域；范围；领土；领地"},
+    {"en": "criticise", "cn": "v. 批评；指责"},
+    {"en": "beard", "cn": "n. 胡须；络腮胡子"},
+    {"en": "moreover", "cn": "adv. 而且；此外"},
+    {"en": "prior", "cn": "adj. 先前的；在前的"},
+    {"en": "ideal", "cn": "adj. 理想的；完美的 n. 理想；典范"},
+    {"en": "throughout", "cn": "prep. 遍及；在整个期间"},
+    {"en": "exposure", "cn": "n. 暴露；接触；曝光；揭露"},
+    {"en": "bunch", "cn": "n. 一束；一串 v. 聚集成束"},
+    {"en": "tale", "cn": "n. 故事；传说"},
+    {"en": "estate", "cn": "n. 地产；房地产"},
+    {"en": "suburb", "cn": "n. 郊区；近郊"},
+    {"en": "mist", "cn": "n. 薄雾；雾霭"},
+    {"en": "investment", "cn": "n. 投资；投入"},
+    {"en": "addict", "cn": "n. 上瘾的人；瘾君子 v. 使沉溺；使上瘾"},
+    {"en": "wire", "cn": "n. 电线；金属丝"},
+    {"en": "botanical", "cn": "adj. 植物学的；植物的"},
+    {"en": "golf", "cn": "n. 高尔夫球运动 v. 打高尔夫球"},
+    {"en": "memorial", "cn": "n. 纪念馆；纪念碑 adj. 纪念的；追悼的"},
+    {"en": "gymnastics", "cn": "n. 体操；体育"},
+    {"en": "native", "cn": "adj. 本国的；本土的 n. 本地人；土著"},
+    {"en": "factor", "cn": "n. 因素；要素"},
+    {"en": "disc", "cn": "n. 磁盘；圆盘"},
+    {"en": "comprehensive", "cn": "adj. 全面的；综合的"},
+    {"en": "lap", "cn": "n. 大腿部；一圈；膝上"},
+    {"en": "representative", "cn": "n. 代表；代理人 adj. 代表性的；典型的"},
+    {"en": "assumption", "cn": "n. 假定；假设"},
 ]
 
 added = []
@@ -168,6 +202,16 @@ for i, item in enumerate(existing):
 lines.append("];")
 new_arr = "\n".join(lines)
 html = html[: m.start()] + new_arr + html[m.end() :]
+if html.startswith("<!DOCTYPE html>"):
+    html = (
+        "<!DOCTYPE html>\n"
+        "<!--\n"
+        "Copyright 2026 Yize He\n"
+        "Licensed under the Apache License, Version 2.0\n"
+        "http://www.apache.org/licenses/LICENSE-2.0\n"
+        "-->\n"
+        + html[len("<!DOCTYPE html>") :].lstrip("\n")
+    )
 
 out = ROOT / "index.html"
 out.write_text(html, encoding="utf-8")

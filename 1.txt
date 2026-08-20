@@ -1091,3 +1091,45 @@ n.
 02
 
 HTML的UI不能变化。功能也不能变化，然后本地跑一个HTTP服务跑在8811上。
+
+加词：
+姓　　名： 何屹泽
+词　　库： 高考新课标3000（2.0）
+正课日期： 2026.08.19
+今日难词
+暂无今日难词数据
+高考高频词
+surrounding adj. 周围的；附近的
+horrible adj. 可怕的；糟糕的
+bar n. 酒吧；吧台 v. 阻挡；禁止
+bet v. 打赌 n. 赌注
+visual adj. 视觉的；视力的 n. 视觉资料；图像
+leisure n. 闲暇；空闲
+domain n. 领域；范围；领土；领地
+criticise v. 批评；指责
+beard n. 胡须；络腮胡子
+moreover adv. 而且；此外
+prior adj. 先前的；在前的
+ideal adj. 理想的；完美的 n. 理想；典范
+throughout prep. 遍及；在整个期间
+exposure n. 暴露；接触；曝光；揭露
+bunch n. 一束；一串 v. 聚集成束
+tale n. 故事；传说
+estate n. 地产；房地产
+suburb n. 郊区；近郊
+mist n. 薄雾；雾霭
+investment n. 投资；投入
+addict n. 上瘾的人；瘾君子 v. 使沉溺；使上瘾
+wire n. 电线；金属丝
+botanical adj. 植物学的；植物的
+golf n. 高尔夫球运动 v. 打高尔夫球
+memorial n. 纪念馆；纪念碑 adj. 纪念的；追悼的
+gymnastics n. 体操；体育
+native adj. 本国的；本土的 n. 本地人；土著
+factor n. 因素；要素
+disc n. 磁盘；圆盘
+comprehensive adj. 全面的；综合的
+lap n. 大腿部；一圈；膝上
+representative n. 代表；代理人 adj. 代表性的；典型的
+assumption n. 假定；假设
+
