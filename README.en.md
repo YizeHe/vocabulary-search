@@ -4,6 +4,8 @@ English | [简体中文](README.md)
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
+Live site: https://voc.forbiddenx.top/
+
 A local web page for looking up words from the Chinese National Gaokao English curriculum list (about 3,000 headwords). Search by English spelling or Chinese gloss. The same page can be opened on a phone or another computer on the LAN.
 
 The current list has about 832 entries: common curriculum words plus in-class additions, merged and de-duplicated.
@@ -53,11 +55,28 @@ python build.py
 
 This merges the additions into `index.html` and leaves the UI and search behavior unchanged.
 
+## Deploy to Cloudflare
+
+Copy the latest `index.html` into `public/`, then:
+
+```bash
+# Pages
+wrangler pages deploy public --project-name voc --branch main --commit-dirty=true
+
+# Custom domain voc.forbiddenx.top
+wrangler deploy
+```
+
+- Custom domain: https://voc.forbiddenx.top/
+- Pages: https://voc-bh4.pages.dev/
+
 ## Layout
 
 | File | Role |
 |------|------|
 | `index.html` | Lookup page (word list + UI) |
+| `public/` | Cloudflare static assets |
+| `wrangler.jsonc` | Cloudflare deploy config |
 | `serve.py` | LAN HTTP server on port 8811 |
 | `build.py` | Merge `1.txt` into `index.html` |
 | `1.txt` | Original HTML and classroom additions |

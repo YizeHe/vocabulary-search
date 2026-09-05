@@ -4,6 +4,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
+在线地址：https://voc.forbiddenx.top/
+
 本地网页：按英文单词或中文释义检索高考新课标词汇。页面打开后即可搜索，也可在同一局域网的手机或其他电脑上打开。
 
 当前词库约 832 个词，由课标常用词与课堂加词合并、去重而成。
@@ -53,11 +55,28 @@ python build.py
 
 会把加词合并进 `index.html`，界面和搜索逻辑保持不变。
 
+## 部署到 Cloudflare
+
+把最新 `index.html` 拷到 `public/` 后部署：
+
+```bash
+# Pages
+wrangler pages deploy public --project-name voc --branch main --commit-dirty=true
+
+# 自定义域名 voc.forbiddenx.top
+wrangler deploy
+```
+
+- 自定义域名：https://voc.forbiddenx.top/
+- Pages：https://voc-bh4.pages.dev/
+
 ## 项目结构
 
 | 文件 | 说明 |
 |------|------|
 | `index.html` | 查询页（词库 + 界面） |
+| `public/` | Cloudflare 静态资源目录 |
+| `wrangler.jsonc` | Cloudflare 部署配置 |
 | `serve.py` | 局域网 HTTP 服务，端口 8811 |
 | `build.py` | 从 `1.txt` 合并词库并生成 `index.html` |
 | `1.txt` | 原始 HTML 与课堂加词 |
